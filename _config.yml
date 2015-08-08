@@ -18,4 +18,5 @@ sass:
   sass_dir: _sass
 
 sass:
-  style: compressed
+  #style: compressed
+  style: nested
