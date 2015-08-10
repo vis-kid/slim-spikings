@@ -40,12 +40,21 @@
     padding-right: $centered-navigation-submenu-padding
     text-decoration: none
     text-transform: uppercase
+    -webkit-transform: skew(-20deg)
+    -moz-transform: skew(-20deg)
+    -o-transform: skew(-20deg)
+      
     +media($horizontal-bar-mode)
       display: none
-
     &:focus,
     &:hover
+      padding-left: $centered-navigation-item-padding / 2
       color: $centered-navigation-color-hover
+      background-color: white
+      -webkit-transform: skew(-20deg)
+      -moz-transform: skew(-20deg)
+      -o-transform: skew(-20deg)
+      color: $brand-color
   // Nav menu
   .centered-navigation-wrapper
     +outer-container
@@ -66,7 +75,7 @@
       display: block
     +media($horizontal-bar-mode)
       display: block
-      margin-left: 22%
+      margin-left: 18%
       //text-align: center
   // The nav items
   .nav-link:first-child
@@ -82,11 +91,17 @@
     width: 100%
     z-index: 9999
     a
+      padding-right: $centered-navigation-item-padding / 2
+      padding-left: $centered-navigation-item-padding / 2
       text-align: center
       color: $centered-navigation-color
       display: inline-block
       outline: none
       text-decoration: none
+      -webkit-transform: skew(-20deg)
+      -moz-transform: skew(-20deg)
+      -o-transform: skew(-20deg)
+      color: white
       &:focus,
       &:hover
         background-color: white
@@ -98,9 +113,6 @@
       background: transparent
       display: inline
       line-height: $centered-navigation-height
-      a
-        padding-right: $centered-navigation-item-padding / 2
-        padding-left: $centered-navigation-item-padding / 2
   li.logo.nav-link
     display: none
     line-height: 0
