@@ -8,7 +8,7 @@
   $centered-navigation-background: $brand-color
   $centered-navigation-color: $base-font-color
   $centered-navigation-color-hover: $base-font-color
-  $centered-navigation-height: 65px
+  $centered-navigation-height: 47px
   $centered-navigation-item-padding: 1em
   $centered-navigation-submenu-padding: 1em
   $centered-navigation-submenu-width: 12em
@@ -21,7 +21,7 @@
   // Mobile view
   .mobile-logo, .logo
     position: absolute
-    margin-top: 5px
+    margin-top: -7px
     display: inline
     float: left
     max-height: $centered-navigation-height
@@ -82,19 +82,25 @@
     width: 100%
     z-index: 9999
     a
+      text-align: center
       color: $centered-navigation-color
       display: inline-block
       outline: none
       text-decoration: none
       &:focus,
       &:hover
-        opacity: .85
+        background-color: white
+        -webkit-transform: skew(-20deg)
+        -moz-transform: skew(-20deg)
+        -o-transform: skew(-20deg)
+        color: $brand-color
     +media($horizontal-bar-mode)
       background: transparent
       display: inline
       line-height: $centered-navigation-height
       a
-        padding-right: $centered-navigation-item-padding
+        padding-right: $centered-navigation-item-padding / 2
+        padding-left: $centered-navigation-item-padding / 2
   li.logo.nav-link
     display: none
     line-height: 0
