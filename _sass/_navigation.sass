@@ -1,3 +1,8 @@
+=skew 
+  -webkit-transform: skew(-20deg)
+  -moz-transform: skew(-20deg)
+  -o-transform: skew(-20deg)
+
 .centered-navigation
   $base-border-radius: 3px !default
   //$dark-gray: #333333 !default
@@ -41,9 +46,6 @@
     padding-right: $centered-navigation-submenu-padding
     text-decoration: none
     text-transform: uppercase
-    -webkit-transform: skew(-20deg)
-    -moz-transform: skew(-20deg)
-    -o-transform: skew(-20deg)
       
     +media($horizontal-bar-mode)
       display: none
@@ -52,9 +54,7 @@
       padding-left: $centered-navigation-item-padding / 2
       color: $centered-navigation-color-hover
       background-color: white
-      -webkit-transform: skew(-20deg)
-      -moz-transform: skew(-20deg)
-      -o-transform: skew(-20deg)
+      +skew
       color: $brand-color
   // Nav menu
   .centered-navigation-wrapper
@@ -100,16 +100,11 @@
       display: inline-block
       outline: none
       text-decoration: none
-      -webkit-transform: skew(-20deg)
-      -moz-transform: skew(-20deg)
-      -o-transform: skew(-20deg)
+      +skew
       color: white
       &:focus,
       &:hover
         background-color: white
-        -webkit-transform: skew(-20deg)
-        -moz-transform: skew(-20deg)
-        -o-transform: skew(-20deg)
         color: $brand-color
     +media($horizontal-bar-mode)
       background: transparent
