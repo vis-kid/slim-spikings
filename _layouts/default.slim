@@ -1,8 +1,6 @@
 html
   head
-    link href="/css/application.css" rel="stylesheet" /
-    script src="//code.jquery.com/jquery-1.11.3.min.js" 
-    script src="/assets/js/example.js"
+    {% include header.slim %} 
   body
     {% include navigation.slim %}
     .content-wrapper {{ content }}
